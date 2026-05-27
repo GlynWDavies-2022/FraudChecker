@@ -1,0 +1,26 @@
+---------------------------------------------------------------------------------------------------
+EF Core Commands
+---------------------------------------------------------------------------------------------------
+
+Use Package Manager Console to run these commands.
+
+These commands can be run from anywhere in the solution if the flags are added.
+
+dotnet ef migrations add InitialCreate 
+	--project FraudChecker.Infrastructure --startup-project FraudChecker.API
+
+dotnet ef database update 
+	--project FraudChecker.Infrastructure --startup-project FraudChecker.API
+
+Add-Migration InitialCreate
+	--project FraudChecker.Infrastructure --startup-project FraudChecker.API
+
+Update-Database
+	--project FraudChecker.Infrastructure --startup-project FraudChecker.API
+
+If the flags are omitted :
+
+	1. Specify FraudChecker.API as the startup project
+	2. Run these commands from the FraudChecker.Infrastructure project
+
+---------------------------------------------------------------------------------------------------
