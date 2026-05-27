@@ -1,0 +1,10 @@
+<Solution>
+  <Project Path="FraudChecker.API.Tests/FraudChecker.API.Tests.csproj" />
+  <Project Path="FraudChecker.API/FraudChecker.API.csproj" />
+  <Project Path="FraudChecker.Application.Tests/FraudChecker.Application.Tests.csproj" />
+  <Project Path="FraudChecker.Application/FraudChecker.Application.csproj" />
+  <Project Path="FraudChecker.Domain.Tests/FraudChecker.Domain.Tests.csproj" />
+  <Project Path="FraudChecker.Domain/FraudChecker.Domain.csproj" />
+  <Project Path="FraudChecker.Infrastructure.Tests/FraudChecker.Infrastructure.Tests.csproj" />
+  <Project Path="FraudChecker.Infrastructure/FraudChecker.Infrastructure.csproj" />
+</Solution>
