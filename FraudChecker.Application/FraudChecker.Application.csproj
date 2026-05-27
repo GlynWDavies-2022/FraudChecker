@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FraudChecker.Domain\FraudChecker.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
