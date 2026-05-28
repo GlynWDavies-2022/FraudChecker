@@ -67,20 +67,18 @@ public class CompanyRepository(FraudCheckerSQLDBContext context) : ICompanyRepos
         return existingCompany;
     }
 
-    public async Task<Company?> DeleteAsync(int id)
+    public async Task DeleteAsync(int id)
     {
         var companyToDelete = await context.Companies.FindAsync(id);
 
         if (companyToDelete is null)
         {
-            return null!;
+            return;
         }
 
         context.Companies.Remove(companyToDelete);
 
         await context.SaveChangesAsync();
-
-        return companyToDelete;
     }
 
     public async Task<bool> ExistsAsync(int id)
