@@ -20,7 +20,31 @@ public class CompaniesControllerTests
     }
 
     [Fact]
-    public async Task ListAllAsync_ReturnsOkResult_WithListOfCompanies()
+    public async Task ListAllAsync_ReturnsOkResult_WithEmptyListWhenNoCompaniesExist()
+    {
+        // Arrange
+
+        List<Company> companies = [];
+
+        _mockRepository
+            .Setup(repository => repository.ListAllAsync())
+            .ReturnsAsync(companies);
+
+        // Act
+
+        var result = await _controller.ListAllAsync();
+
+        // Assert
+
+        var okResult = Assert.IsType<OkObjectResult>(result.Result);
+
+        var returnedCompanies = Assert.IsType<IReadOnlyList<Company>>(okResult.Value, exactMatch: false);
+
+        Assert.Empty(returnedCompanies);
+    }
+
+    [Fact]
+    public async Task ListAllAsync_ReturnsOkResult_WithListOfCompaniesWhenCompaniesExist()
     {
         // Arrange
 
