@@ -7,4 +7,6 @@
   <Project Path="FraudChecker.Domain/FraudChecker.Domain.csproj" />
   <Project Path="FraudChecker.Infrastructure.Tests/FraudChecker.Infrastructure.Tests.csproj" />
   <Project Path="FraudChecker.Infrastructure/FraudChecker.Infrastructure.csproj" />
+  <Project Path="FraudChecker.Worker.Tests/FraudChecker.Worker.Tests.csproj" Id="63782780-3b70-4a60-bf61-89d30e6a1cdd" />
+  <Project Path="FraudChecker.Worker/FraudChecker.Worker.csproj" Id="36873d6d-517d-42da-a3a8-e700f8eab24a" />
 </Solution>
